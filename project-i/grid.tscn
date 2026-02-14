@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dr5dk7v5kdv1m"]
+
+[ext_resource type="Script" uid="uid://0ngv2vvhrocf" path="res://Tools/button_group.gd" id="1_ebq2e"]
+[ext_resource type="PackedScene" uid="uid://53g5mqxx8o0h" path="res://Tools/button.tscn" id="2_65i6o"]
+
+[node name="Grid" type="Node" unique_id=2098580461]
+
+[node name="Button_Group" type="CanvasGroup" parent="." unique_id=2082321101]
+script = ExtResource("1_ebq2e")
+button = ExtResource("2_65i6o")
