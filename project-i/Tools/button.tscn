@@ -28,18 +28,15 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7g2er"]
 size = Vector2(20, 17.000004)
 
-[node name="Button" type="Node2D" unique_id=976652685]
-
-[node name="Button" type="AnimatedSprite2D" parent="." unique_id=166758312]
-unique_name_in_owner = true
+[node name="Button" type="AnimatedSprite2D" unique_id=166758312]
 scale = Vector2(4.5, 6)
 sprite_frames = SubResource("SpriteFrames_qli5q")
 script = ExtResource("2_dr4pb")
 
-[node name="Button_area" type="Area2D" parent="Button" unique_id=38687328]
+[node name="Button_area" type="Area2D" parent="." unique_id=38687328]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Button_area" unique_id=421260595]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button_area" unique_id=421260595]
 shape = SubResource("RectangleShape2D_7g2er")
 
-[connection signal="mouse_entered" from="Button/Button_area" to="Button" method="_on_button_area_mouse_entered"]
-[connection signal="mouse_exited" from="Button/Button_area" to="Button" method="_on_button_area_mouse_exited"]
+[connection signal="mouse_entered" from="Button_area" to="." method="_on_button_area_mouse_entered"]
+[connection signal="mouse_exited" from="Button_area" to="." method="_on_button_area_mouse_exited"]
