@@ -167,5 +167,3 @@ position = Vector2(920, 580)
 
 [node name="B10" parent="Button_Group/row_5" unique_id=127381075 instance=ExtResource("2_65i6o")]
 position = Vector2(1035, 580)
-
-[connection signal="child_entered_tree" from="Button_Group" to="Button_Group" method="_on_child_entered_tree"]

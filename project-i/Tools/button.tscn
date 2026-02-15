@@ -32,6 +32,7 @@ size = Vector2(20, 17.000004)
 
 [node name="Button" type="AnimatedSprite2D" parent="." unique_id=166758312]
 unique_name_in_owner = true
+scale = Vector2(4.5, 6)
 sprite_frames = SubResource("SpriteFrames_qli5q")
 script = ExtResource("2_dr4pb")
 
