@@ -37,6 +37,7 @@ script = ExtResource("2_dr4pb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button_area" unique_id=421260595]
 shape = SubResource("RectangleShape2D_7g2er")
+debug_color = Color(0.9833376, 0, 0.35828054, 0.41960785)
 
 [connection signal="mouse_entered" from="Button_area" to="." method="_on_button_area_mouse_entered"]
 [connection signal="mouse_exited" from="Button_area" to="." method="_on_button_area_mouse_exited"]

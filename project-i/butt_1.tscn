@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ctymme5iexkhk"]
+
+[ext_resource type="Texture2D" uid="uid://bl6kyd1budb7x" path="res://assets/Button_no_an.png" id="1_kapmp"]
+[ext_resource type="Script" uid="uid://ch12ad1fpcgye" path="res://butt_script.gd" id="2_8qevw"]
+
+[node name="butt_1" type="Control" unique_id=1794349681]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="B1" type="Button" parent="." unique_id=401325425]
+layout_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("1_kapmp")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_8qevw")
