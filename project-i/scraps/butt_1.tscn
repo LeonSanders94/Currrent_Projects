@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ctymme5iexkhk"]
 
 [ext_resource type="Texture2D" uid="uid://bl6kyd1budb7x" path="res://assets/Button_no_an.png" id="1_kapmp"]
-[ext_resource type="Script" uid="uid://ch12ad1fpcgye" path="res://butt_script.gd" id="2_8qevw"]
+[ext_resource type="Script" uid="uid://ch12ad1fpcgye" path="res://scraps/butt_script.gd" id="2_8qevw"]
 
 [node name="butt_1" type="Control" unique_id=1794349681]
 layout_mode = 3

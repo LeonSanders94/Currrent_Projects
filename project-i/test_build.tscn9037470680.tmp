@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://coqkad2xh8me5"]
+
+[ext_resource type="Script" uid="uid://cydnwi6tr7knp" path="res://temp_grid.gd" id="1_r13dh"]
+[ext_resource type="PackedScene" uid="uid://dsk4njqgvlws4" path="res://Grid.tscn" id="1_u3cy7"]
+
+[node name="test build" type="Node" unique_id=208647216]
+script = ExtResource("1_r13dh")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1133806388]
+color = Color(0.40018785, 0.7698625, 0.66743076, 0.133)
+polygon = PackedVector2Array(-145, 162, 78, -136, 1173, -132, 1412, 180, 1420, 813, -141, 817)
+
+[node name="Inv" parent="." unique_id=1995235046 groups=["GArea", "inv"] instance=ExtResource("1_u3cy7")]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_top = 0.60800004
+offset_left = 321.5
+offset_top = 35.01596
+offset_right = -321.5
+grow_vertical = 0
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+columns = 10
+width = 10
+cellWidth = 50
+cellHeight = 40
+borderSize = 1
+
+[node name="GArea" parent="." unique_id=1679430674 instance=ExtResource("1_u3cy7")]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -440.0
+offset_right = 440.0
+offset_bottom = 430.0
+grow_vertical = 1
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 25
+width = 25
+height = 10
+cellWidth = 25
+cellHeight = 25

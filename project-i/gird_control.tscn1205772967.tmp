@@ -19,3 +19,5 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 10
 script = ExtResource("1_im3yt")
+grid_rows = null
+grid_columns = null

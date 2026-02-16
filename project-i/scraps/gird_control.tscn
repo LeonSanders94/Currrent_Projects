@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bih447mpxxwy7"]
+
+[ext_resource type="Script" uid="uid://d14prosf1e6xl" path="res://scraps/gird_control.gd" id="1_im3yt"]
+
+[node name="Gird_control" type="Control" unique_id=1815298863]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=994217764]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 10
+script = ExtResource("1_im3yt")
+grid_rows = null
+grid_columns = null
