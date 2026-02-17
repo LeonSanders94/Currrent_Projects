@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://coqkad2xh8me5"]
 
+[ext_resource type="Script" uid="uid://cydnwi6tr7knp" path="res://temp_grid.gd" id="1_r13dh"]
 [ext_resource type="PackedScene" uid="uid://dsk4njqgvlws4" path="res://Grid.tscn" id="1_u3cy7"]
 [ext_resource type="PackedScene" uid="uid://dfuis7ev3jsyx" path="res://grid_cell.tscn" id="3_0xttn"]
 
 [node name="test build" type="Node" unique_id=208647216]
+script = ExtResource("1_r13dh")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1133806388]
 color = Color(0.40018785, 0.7698625, 0.66743076, 0.133)
@@ -47,4 +49,3 @@ height = 10
 cellWidth = 45
 cellHeight = 45
 borderSize = -4
-metadata/_edit_use_anchors_ = true

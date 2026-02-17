@@ -3,10 +3,10 @@ extends GridContainer
 @export var GRID_CELL:PackedScene
 
 var grid_registry = []
+var action_director
 
 ##Grid Maker##
 @export var width:int = 5:
-	
 	set(value): 
 		width = value
 		_remove_grid()
@@ -45,21 +45,50 @@ func _create_grid():
 		if grid_group_name != "":
 			var button = gridCellNode.get_node("Button")
 			button.add_to_group(grid_group_name)
-		
+		_register_buttons(gridCellNode)
 
 	print(grid_group_name)
 func _remove_grid():
 	for node in get_children():
 		node.queue_free()
 
-func _register_buttons():
-	print("Grid Registry: ",grid_registry)
-	for child in get_children():
+##SIGNAL CONTROLLER##
+func _register_buttons(gridCellNode):
+	action_director = gridCellNode
+	for child in gridCellNode.get_children():
 		if child.has_signal("button_press"):
 			child.button_press.connect(_button_press)
+		if child.has_signal("pressed_flag_false"):
+			child.pressed_flag_false.connect(_button_unpressed)
+		if child.has_signal("pressed_flag_true"):
+			child.pressed_flag_true.connect(_button_pressed)
+##
+##Registration to Grid "grid_resgistry" Array##
+var counter = 0
+var finisher:bool
+func _button_press(BID: String):
+	grid_registry.append(BID)
+	var limiter = width * height
+	if counter < limiter:
+		counter += 1
+		finisher = false
+	elif counter >= limiter and finisher == false:
+		print("Grid Registry ",self.name,": ",grid_registry)
+		finisher = true
+		
+####
+##Signals from Buttons##
 
-func _button_press(button_name: String):
-	print(button_name)
-	match button_name:
-		"Tile Button":
-			print("pressed! on grid:",button_name)
+##^^-sceneroot game manager-^^##
+func _button_unpressed(BID):
+	print(BID,", Grid received: button unpressed signal")
+
+func _button_pressed(BID):
+	print(BID,"Grid received: button pressed signal")
+	if grid_group_name == "GArea":
+		if MGM.current_selection != "":
+			print(MGM.current_selection, "Placed at", BID)
+		else:
+			print("No Item selected, select an item from Inv First.")
+
+####
