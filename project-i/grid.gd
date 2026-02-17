@@ -1,8 +1,11 @@
-
 extends GridContainer
-@export var grid_group_name := ""
+@export var grid_group_name:String = ""
 @export var GRID_CELL:PackedScene
-@export var width := 5:
+
+var grid_registry = []
+
+##Grid Maker##
+@export var width:int = 5:
 	
 	set(value): 
 		width = value
@@ -28,7 +31,7 @@ extends GridContainer
 		borderSize = value
 		_remove_grid()
 		_create_grid()
-
+####
 
 func _create_grid():
 	add_theme_constant_override("h_separation", borderSize)
@@ -48,3 +51,15 @@ func _create_grid():
 func _remove_grid():
 	for node in get_children():
 		node.queue_free()
+
+func _register_buttons():
+	print("Grid Registry: ",grid_registry)
+	for child in get_children():
+		if child.has_signal("button_press"):
+			child.button_press.connect(_button_press)
+
+func _button_press(button_name: String):
+	print(button_name)
+	match button_name:
+		"Tile Button":
+			print("pressed! on grid:",button_name)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://coqkad2xh8me5"]
 
 [ext_resource type="Script" uid="uid://cydnwi6tr7knp" path="res://temp_grid.gd" id="1_r13dh"]
-[ext_resource type="PackedScene" uid="uid://dsk4njqgvlws4" path="res://Grid.tscn" id="1_u3cy7"]
+[ext_resource type="PackedScene" uid="uid://dsk4njqgvlws4" path="res://grid.tscn" id="1_u3cy7"]
 [ext_resource type="PackedScene" uid="uid://dfuis7ev3jsyx" path="res://grid_cell.tscn" id="3_0xttn"]
 
 [node name="test build" type="Node" unique_id=208647216]
@@ -37,7 +37,7 @@ anchor_right = 0.5
 anchor_bottom = 0.0
 offset_left = -440.0
 offset_right = 440.0
-offset_bottom = 430.0
+offset_bottom = 388.0
 grow_vertical = 1
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
@@ -46,5 +46,6 @@ grid_group_name = "GArea"
 GRID_CELL = ExtResource("3_0xttn")
 width = 25
 height = 10
-cellWidth = 25
-cellHeight = 25
+cellWidth = 45
+cellHeight = 45
+borderSize = -4

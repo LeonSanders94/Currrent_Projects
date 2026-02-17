@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dfuis7ev3jsyx"]
+
+[ext_resource type="Texture2D" uid="uid://mnjb4ti0nkxy" path="res://assets/empty_pipe_slot.png" id="1_yglvi"]
+[ext_resource type="Script" uid="uid://baco6cck8id14" path="res://button.gd" id="3_jveu0"]
+
+[node name="PanelContainer" type="PanelContainer" unique_id=1542382158]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_right = 0.034722224
+anchor_bottom = 0.061728396
+
+[node name="Button" type="Button" parent="." unique_id=1962818312]
+layout_mode = 2
+toggle_mode = true
+icon = ExtResource("1_yglvi")
+clip_text = true
+icon_alignment = 1
+script = ExtResource("3_jveu0")
+
+[connection signal="toggled" from="Button" to="Button" method="_on_toggled"]
