@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://fq1imsysxe1t"]
+
+[ext_resource type="Script" uid="uid://b0udw4qrfrsiw" path="res://g_area_button.gd" id="1_iu6lq"]
+
+[node name="GArea_button" type="Button" unique_id=1179472784]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 198.0
+offset_right = -641.0
+offset_bottom = -216.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play Area"
+script = ExtResource("1_iu6lq")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

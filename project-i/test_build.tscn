@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://coqkad2xh8me5"]
 
-[ext_resource type="PackedScene" uid="uid://dsk4njqgvlws4" path="res://Grid.tscn" id="1_u3cy7"]
+[ext_resource type="PackedScene" uid="uid://dsk4njqgvlws4" path="res://grid.tscn" id="1_u3cy7"]
 [ext_resource type="PackedScene" uid="uid://dfuis7ev3jsyx" path="res://grid_cell.tscn" id="3_0xttn"]
 
 [node name="test build" type="Node" unique_id=208647216]

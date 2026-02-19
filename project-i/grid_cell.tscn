@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dfuis7ev3jsyx"]
 
 [ext_resource type="Texture2D" uid="uid://mnjb4ti0nkxy" path="res://assets/empty_pipe_slot.png" id="1_yglvi"]
-[ext_resource type="Script" uid="uid://baco6cck8id14" path="res://button.gd" id="3_jveu0"]
+[ext_resource type="Script" uid="uid://baco6cck8id14" path="res://scraps/button.gd" id="3_jveu0"]
 
 [node name="PanelContainer" type="PanelContainer" unique_id=1542382158]
 custom_minimum_size = Vector2(32, 32)

@@ -77,9 +77,7 @@ func _button_press(BID: String):
 		finisher = true
 		
 ####
-##Signals from Buttons##
-
-##^^-sceneroot game manager-^^##
+##Signals Action from Buttons##
 func _button_unpressed(BID):
 	print(BID,", Grid received: button unpressed signal")
 
@@ -88,7 +86,13 @@ func _button_pressed(BID):
 	if grid_group_name == "GArea":
 		if MGM.current_selection != "":
 			print(MGM.current_selection, "Placed at", BID)
+			MGM.current_selection = ""
 		else:
 			print("No Item selected, select an item from Inv First.")
-
+	if grid_group_name == "inv":
+		if MGM.current_selection == "":
+			MGM.current_selection = "Test_Item"
+			print("Grabbed ", MGM.current_selection, "from: ", BID)
+		else:
+			print("You're already holding an item")
 ####

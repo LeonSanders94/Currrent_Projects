@@ -23,26 +23,24 @@ func _check_up():
 		self.icon = preload("res://assets/empty_pipe_slot.png")
 
 func _check_down():
-	pressed_flag_true.emit(BID)
-	print(BID," :PRESSED")
-
 	if self.is_in_group("GArea"):
 		if MGM.current_selection != "":
-			print(BID,": I'm in GArea")
+			set_pressed_no_signal(true)
+			pressed_flag_true.emit(BID)
 		else:
+			set_pressed_no_signal(false)
 			_check_up()
 	elif self.is_in_group("inv"):
 		if MGM.current_selection == "":
-			print(BID,": I'm in inv")
+			set_pressed_no_signal(true)
+			pressed_flag_true.emit(BID)
 		else:
+			set_pressed_no_signal(false)
 			_check_up()
-	else:
-		print(BID,": I think I'm an Orphan", self.get_groups())
 
 func _on_toggled(toggled_on: bool) -> void:
-	if toggled_on == true:
+	if toggled_on:
 		_check_down()
-	if toggled_on == false:
+	else:
+		set_pressed_no_signal(false)
 		_check_up()
-	
-	
